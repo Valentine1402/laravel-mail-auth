@@ -1,3 +1,7 @@
+* {
+  font-family: "Lato", sans-serif;
+}
+
 body {
   background: lightgrey;
   color: white;
@@ -9,26 +13,39 @@ body a {
   text-decoration: none;
 }
 
-body header {
-  background: black;
-  text-align: center;
-  border-radius: 10px;
-}
-
-body header h1 {
-  color: white;
-}
-
+body header,
 body footer {
+  height: 80px;
+  background-color: #2a1244;
   display: -webkit-box;
   display: flex;
-  border-radius: 15px;
-  background: #333;
-  min-height: 200px;
+  -webkit-box-pack: justify;
+          justify-content: space-between;
+  padding: 0 20px;
 }
 
-body footer p {
-  margin: auto;
+body header ul,
+body footer ul {
+  width: 200px;
+  list-style-type: none;
+  display: -webkit-box;
+  display: flex;
+  justify-content: space-around;
+  -webkit-box-align: center;
+          align-items: center;
+}
+
+body header ul a,
+body footer ul a {
+  color: white;
+  text-decoration: none;
+  -webkit-transition: all 0.5s ease-in-out;
+  transition: all 0.5s ease-in-out;
+}
+
+body header ul a:hover,
+body footer ul a:hover {
+  color: #0ff;
 }
 
 body .hide {
@@ -40,7 +57,7 @@ body .content {
 }
 
 body .content .category {
-  background: grey;
+  background: #634171;
   border-radius: 15px;
   text-align: center;
   margin: 10px;
@@ -66,8 +83,9 @@ body .posts .post {
   width: 100px;
   height: 100px;
   padding: 10px;
-  border-radius: 100%;
-  background: white;
+  border-radius: 10%;
+  margin: 5px;
+  background: #8b7099;
   color: black;
 }
 

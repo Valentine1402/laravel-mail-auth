@@ -2,18 +2,17 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <meta http-equiv="X-UA-Compatible" content="ie=edge">
-  <link rel="stylesheet" href="{{ mix('css/app.css') }}">
+   <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="{{mix('css/app.css')}}">
+    <link href="https://fonts.googleapis.com/css?family=Lato&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="framework/12bool.css">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.5.0/css/all.css">
   <title>BLOG</title>
 </head>
 <body>
   
   <header>
-    <a href="{{ route('home.index') }}">
-      <h1>BLOG</h1>
-    </a>
+     @include('components.header')
   </header>
   
   <div class="content">
@@ -21,7 +20,7 @@
   </div>
 
   <footer>
-    <p>Bye Bye</p>
+    @include('components.footer')
   </footer>
 
 </body>
