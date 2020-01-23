@@ -1,4 +1,4 @@
- <ul><li><a href="/">My project: </a></li></ul>
+ <ul><li><a href="/">My BLOG: </a></li></ul>
     <ul>
         <li>
             <a href="{{ route('home.index') }}">Home</a>

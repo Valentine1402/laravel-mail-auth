@@ -5,8 +5,12 @@ namespace App\Http\Controllers;
 use Illuminate\Http\Request;
 use App\Http\Requests\PostRequest;
 use App\Http\Requests\CategoryRequest;
+
 use App\Category;
 use App\Post;
+
+use Illuminate\Support\Facades\Mail;
+use App\Mail\DBActionDelete;
 
 class MainController extends Controller
 {
@@ -65,6 +69,12 @@ class MainController extends Controller
         // });
         $category->posts()->delete();
         $category->delete();
+
+        Mail::to('prova@indirizzo.com')
+         ->send(new DBActionDelete ( 
+            'Category',
+            $category -> name
+        ));
         return redirect()->route('home.index');
     }
 
