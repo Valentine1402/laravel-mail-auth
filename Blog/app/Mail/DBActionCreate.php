@@ -7,7 +7,7 @@ use Illuminate\Contracts\Queue\ShouldQueue;
 use Illuminate\Mail\Mailable;
 use Illuminate\Queue\SerializesModels;
 
-class DBActionDelete extends Mailable
+class DBActionCreate extends Mailable
 {
     use Queueable, SerializesModels;
 
@@ -16,7 +16,6 @@ class DBActionDelete extends Mailable
      *
      * @return void
      */
-
     private $type;
     private $name;
 
@@ -33,9 +32,9 @@ class DBActionDelete extends Mailable
      */
     public function build()
     {
-        $type = $this -> type;
-        $name = $this -> name;
+        $type = $this-> type;
+        $name = $this-> name;
 
-        return $this->view('mails.dbActionDelete', compact('type', 'name'));
+        return $this->view('mails.dbActionCreate', compact('type', 'name'));
     }
 }

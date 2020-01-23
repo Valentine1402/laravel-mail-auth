@@ -1,1 +1,1 @@
-{{$type}} : {{$name}} : ok
+{{$type}} : {{$name}} : se questa mail è stata inviata per errore clicca qui 
