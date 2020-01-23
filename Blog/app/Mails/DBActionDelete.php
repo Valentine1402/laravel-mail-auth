@@ -36,6 +36,6 @@ class DBActionDelete extends Mailable
         $type = $this -> type;
         $name = $this -> name;
 
-        return $this->view('Mails.DBActionDelete', compact('type', 'name'));
+        return $this->view('mails.dbActionDelete', compact('type', 'name'));
     }
 }
