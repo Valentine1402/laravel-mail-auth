@@ -81,7 +81,7 @@ class MainController extends Controller
             'Category',
             $category -> name
         ));
-        return redirect()->route('home.index');
+        return redirect() -> route('home.index');
     }
 
     public function categoryPost($id)
@@ -101,7 +101,7 @@ class MainController extends Controller
         $post->save();
 
         Mail::to('prova@indirizzo.com')
-            ->send(new DBActionCreate(
+            ->send(new DBActionCreate (
                 'Post',
                 $post-> title
             ));
