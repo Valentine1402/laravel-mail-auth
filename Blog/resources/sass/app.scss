@@ -1,13 +1,24 @@
+//Fonts
+@import url('https://fonts.googleapis.com/com/css?family=Nunito');
+
+//Variables
+@import 'variables';
+
+//Bootstrap'
+@import '~bootstrap/scss/bootstrap' ; 
+
+//
+
 *{
   font-family: 'Lato', sans-serif;
 }
 body {
   background: lightgrey;
-  color: white;
+  color :#2a1244;
   padding: 5px 20px;
   
   a {
-    color: black;
+    color: white;
     text-decoration: none;
   }
 
